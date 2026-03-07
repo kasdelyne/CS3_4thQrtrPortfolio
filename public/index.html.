@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarter 4 Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffeed4;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: #b8d2e0;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .activity {
+            background: #fff3e0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            color: #2c3e50;
+        }
+        
+        .activity a{
+          background: none;
+          color: #3498db; 
+          padding: 0;  
+          text-decoration: underline;  
+          border-radius: 0;  
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Quarter 4 Portfolio</h1>
+    <p>AGNIR, Kacey Adelyne O. | K02 </p>
+</header>
+
+
+<div class="container">
+
+    <div class="section" id="about">
+        <h2>Overview</h2>
+        <p>This portfolio contains school activities, projects, and maybe achievements in Computer Science 3 for Quarter 4 in Grade 9.</p>
+    </div>
+
+    <div class="section" id="activities">
+        <h2>Exercises</h2>
+
+        <div class="activity">
+            <h3>Q4 - 1st Graded Exercise</h3>
+            <p>Here, we learned the first two CRUD operations: Create and Read by making a form that'll contain ratings for each movie that the user has watched.</p>
+            <a href="q41gPotassiumAgnir.html" target="_blank">Click here to view activity!</a>
+        </div>
+
+        <div class="activity">
+            <h3>Q4 - 2nd Graded Exercise</h3>
+            <p>Description</p>
+        </div>
+
+    </div>
+
+    <div class="section" id="projects">
+        <h2>Goals</h2>
+        <p>Below are the things I want to achieve this quarter as the school year approaches its end.</p>
+
+        <ul>
+            <li> Learn how to code under pressure </li>
+            <li> Bring my grades up once more </li>
+            <li> Gain a deeper understanding of the subject</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+</footer>
+
+</body>
+</html>
