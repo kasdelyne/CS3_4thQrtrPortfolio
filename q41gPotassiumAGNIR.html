@@ -6,14 +6,177 @@
     <title> Q4 - 1st Graded Exercise </title>
     <style>
       body{
-        
+        font-family:Arial;
+        background:#eee;
       }
+      
+      .container{
+        width:500px;
+        margin:auto;
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        box-shadow:0 0 5px rgba(0,0,0,0.2);
+      }
+      
+      h2{
+        text-align:center;
+      }
+      
+      input, select{
+        width:100%;
+        padding:8px;
+        margin:5px 0 10px 0;
+        border:1px solid #ccc;
+        border-radius:4px;
+      }
+      
+      button{
+        width:100%;
+        padding:10px;
+        background:#1e73d8;
+        color:white;
+        border:none;
+        border-radius:4px;
+        font-weight:bold;
+        cursor:pointer;
+      }
+      
+      .star{
+        font-size:22px;
+        color:#ccc;
+        cursor:pointer;
+      }
+      
+      .star.active{
+        color:gold;
+      }
+      
+      .movie{
+        background:#f2f2f2;
+        padding:8px;
+        margin-top:6px;
+        border: 1px solid #ccc;
+      }
+
     </style>
   </head>
 
-  <body>
-    <h1> Add a Movie </h1>
-      <form id = "setupForm">
-        <
-  </body>
+<body>
+
+  <div class="container">
+  
+  <h2>Add a Movie</h2>
+  
+  <label>Title:</label>
+  <input type="text" id="title">
+  
+  <label>Year:</label>
+  <input type="number" id="year">
+  
+  <label>Genre:</label>
+    <select id="genre">
+      <option>Action</option>
+      <option>Comedy</option>
+      <option>Drama</option>
+      <option>Horror</option>
+      <option>Sci-Fi</option>
+    </select>
+  
+  <label>Rating:</label>
+  
+  <div id="starContainer">
+  <span class="star" data-value="1">★</span>
+  <span class="star" data-value="2">★</span>
+  <span class="star" data-value="3">★</span>
+  <span class="star" data-value="4">★</span>
+  <span class="star" data-value="5">★</span>
+  </div>
+  
+  <br>
+  
+  <button onclick="addMovie()">Add Movie</button>
+  
+  <h2>Movie List</h2>
+  
+  <div id="movieList"></div>
+  
+  </div>
+
+<script>
+
+let rating = 0;
+
+const stars = document.querySelectorAll(".star");
+
+  stars.forEach(star => {
+  
+    star.addEventListener("click", function(){
+    
+    rating = this.dataset.value;
+    
+    stars.forEach(s => s.classList.remove("active"));
+    
+    for(let i=0;i<rating;i++){
+      stars[i].classList.add("active");
+    }
+  
+  });
+  
+  });
+
+function addMovie(){
+
+  let title = document.getElementById("title").value;
+  let year = document.getElementById("year").value;
+  let genre = document.getElementById("genre").value;
+  
+  let movie = {
+    title:title,
+    year:year,
+    genre:genre,
+    rating:rating
+  };
+  
+  let movies = JSON.parse(localStorage.getItem("movies")) || [];
+  
+  movies.push(movie);
+  
+  localStorage.setItem("movies", JSON.stringify(movies));
+  
+  displayMovies();
+
+}
+
+function displayMovies(){
+
+  let movies = JSON.parse(localStorage.getItem("movies")) || [];
+  
+  let list = document.getElementById("movieList");
+  
+  list.innerHTML="";
+  
+  movies.forEach(movie => {
+  
+  let starsDisplay="";
+  
+  for(let i=0;i<movie.rating;i++){
+    starsDisplay += "⭐";
+  }
+  
+  list.innerHTML += `
+    <div class="movie">
+    ${movie.title} (${movie.year}) - ${movie.genre}, Rating: ${starsDisplay}
+    </div>
+  `;
+  
+  });
+  
+  }
+  
+displayMovies();
+
+</script>
+
+</body>
 </html>
