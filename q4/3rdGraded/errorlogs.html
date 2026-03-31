@@ -56,65 +56,64 @@
       </tr>
       <tr>
         <td> 1 </td> 
+        <td> Lines 7-9 / CSS</td> 
+        <td> In the original, only the last font-family will take effect.</td>
+        <td> Remove the Lines 8 and 9 and add change Line 7 to font-family: 'Open Sans', 'Poppins', 'Roboto', sans-serif;</td>
+      </tr>
+      <tr>
+        <td> 2 </td> 
+        <td> Line 26 / CSS</td> 
+        <td> Navigation bar is not fixed at the top</td>
+        <td> Added "position: fixed; top: 0; left: 0;</td>
+      </tr>
+      <tr>
+        <td> 3 </td> 
+        <td> Line 31 / CSS</td> 
+        <td> Navigation links are displayed vertically instead of horizontally in one line due to display:block</td>
+        <td> Change "display:block" to "display: inline-block"</td>
+      </tr>
+      <tr>
+        <td> 4 </td> 
         <td> Line 33 / CSS</td> 
         <td> Incorrect selector "nav a :hover"; there's an extra space which prevents hover effect</td>
         <td> Change to "nav a:hover"</td>
       </tr>
       <tr>
-        <td> 2 </td> 
-        <td> Line 31 / CSS</td> 
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> 3 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> 4 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> 5 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> Line 5 </td>
+        <td> Line 93 / CSS</td> 
+        <td> 'sprites.png' do not appear in the icons sector  </td>
+        <td> Add "images/" in background: url('sprites.png') no-repeat; so it becomes background: url('images/sprites.png') no-repeat;</td>
       </tr>
       <tr>
         <td> 6 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> Line 1 / JS</td> 
+        <td> There are no parameters in the function</td>
+        <td> Fix function plotPoint(){...} by adding x0,y0,x,y. This becomes function plotPoint(x0,y0,x,y){...}</td>
       </tr>
       <tr>
         <td> 7 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> Line 2 / JS</td> 
+        <td> Missing semicolon in console.log();</td>
+        <td> console.log(x0, y0, x, y);</td>
       </tr>
       <tr>
         <td> 8 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> Line 3 & Lines 12, 15, 18, 21, 24</td> 
+        <td> Failure to declare that "in1" and "out1" as variables</td>
+        <td> Add document.getElementById("in1").innerHTML = x0 + " " + y0 + " " + x + " " + y; or var out1 = document.getElementById('out1');. You can also declare out1 within the if-else functions; however this can be considered a time-consuming approach</td>
       </tr>
       <tr>
         <td> 9 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> Line 7 & 8</td> 
+        <td> styleleft and stylebottom do not exist</td>
+        <td> Fix and change it to point.style.left = ... and point.style.bottom = ...</td>
       </tr>
       <tr>
         <td> 10 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> Line 26</td> 
+        <td> Missing curly bracket to close the function</td>
+        <td> Add "}"</td>
       </tr>
-     
     </table>
     <hr>
   </section>
